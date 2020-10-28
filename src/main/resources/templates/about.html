@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Transfer Data About</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/introjs.css')}}" />
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+
+    <!-- Setting browser/viewport to be width of device  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="application">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Transfer Data Dashboard</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-collapsing-list">
+                <span></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="my-collapsing-list-rm">
+            <ul id="my-collapsing-list" class="nav navbar-nav navbar-right collapse navbar-collapse">
+                <li><a class="nav-menu-list" href="/">Home</a></li>
+                <li><a class="nav-menu-list" href="/data">Data</a></li>
+                <li><a class="nav-menu-list" href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <header class="row">
+            <div class="heading-container">
+                <div class="heading-container-inline">
+                    <img id="prem-badge" src="{{ url_for('static', filename='img/premierLeague.png')}}" alt="premier league badge">
+                </div>
+                <div class="heading-container-inline">
+                    <h1 id="inline">Premier League and Championship <br> Transfer Dashboard</h1>
+                </div>
+                <div class="heading-container-inline">
+                    <img id="champ-badge" src="{{ url_for('static', filename='img/championship.png')}}" alt="English Football League Championship badge">
+                </div>
+            </div>
+        </header>
+        <section class="row">
+            <div class="general-text-cont">
+                <h3><img class="footballImgLG" src="{{ url_for('static', filename='img/football.png')}}" alt="football image">About:</h3>
+                <p> I enjoy both software development (I am looking to forge a new career in this area) and football, and I have always been amazed at the state of the transfer market and the amount of money flowing through it. Every year it seems to get more crazy! So it seemed a good choice of subject to explore these new technologies with.</p>
+
+                <p>The site has been created to show my ability in website development and specifically, <a href="https://dc-js.github.io/dc.js/" target="_blank">DC.js</a> and the supporting software <a href="https://d3js.org/" target="_blank">D3.js</a> and <a href="http://square.github.io/crossfilter/" target="_blank">Crossfilter</a>, in addition to <a href="http://flask.pocoo.org/"  target="_blank">Flask</a>, which is a sever side web mirco-framework that this site runs off.</p>
+
+                <p>The data for the site is based on data from the website <a href="http://www.transferleague.co.uk/" target="_blank">Transfer League</a> which has various stats on associated with Premier and Championship transfers.</p>
+
+                <p>Transfer league is a static website with a detailed view. The aim of this site was to take a broader view of the Premier League and Championship transfer data and present an interactive interface where users could drill down into the data. In essence I wanted to use some of the data but present a different and interactive perspective.</p>
+
+                <p>There are slight differences in the data between Transfer League and this site, in that 'undisclosed fees' are counted as 0 on this site, so consider the totals shown on this site, an 'at least' value, rather than an attempt to get an exact value. </p>                
+            </div>
+        </section>
+    </main>
+    <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
+    <footer>
+        <p class="small text-muted"> Data visualization brought to you by 'The Cheesemonster' &#129472; &#128126;</p>
+    </footer>
+
+</body>
+</html>

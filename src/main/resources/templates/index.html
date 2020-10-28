@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Transfer Data Home</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/introjs.css')}}" />
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/custom.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+
+	<!-- Setting browser/viewport to be width of device  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="application">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Transfer Data Dashboard</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-collapsing-list">
+                <span></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="my-collapsing-list-rm">
+            <ul id="my-collapsing-list" class="nav navbar-nav navbar-right collapse navbar-collapse">
+                <li><a class="nav-menu-list" href="/">Home</a></li>
+                <li><a class="nav-menu-list" href="/data">Data</a></li>
+                <li><a class="nav-menu-list" href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <header class="row">
+            <div class="heading-container">
+                <div class="heading-container-inline">
+                    <img id="prem-badge" src="{{ url_for('static', filename='img/premierLeague.png')}}" alt="premier league badge">
+                </div>
+                <div class="heading-container-inline">
+                    <h1 id="inline">Premier League and Championship <br> Transfer Dashboard</h1>
+                </div>
+                <div class="heading-container-inline">
+                    <img id="champ-badge" src="{{ url_for('static', filename='img/championship.png')}}" alt="English Football League Championship badge">
+                </div>
+            </div>
+        </header>
+        <section class="row">
+            <div class="general-text-cont">
+                <h3><img class="footballImgLG" src="{{ url_for('static', filename='img/football.png')}}" alt="football image">Welcome!</h3>
+                <p>This website is a data dashboard that enables you to look at, and investigate, the high level data relating to the Premier and Championship football leagues transfers! The site provides interactive graphs and charts that not only show information, but allow immediate filtering on the dataset through selection of the criteria shown in the graphs, a truly interactive experience!</p>
+
+                <p>To use the site click on <a href="/data">this</a> link or the 'Data' link in the menu and allow the data to briefly download and the graphs to initialise. Once the graphs have initialised you will be able to see some graphs with a red RESET button, these indicate the interactive graphs which you can click on to filter.</p>
+
+                <p>To use the filters if, for example, you would like to see rest of the graphs reflect only winter transfers, select the winter section of the ‘window’ chart. You can apply multiple filters, so if wanted only winter transfers for the 2010-2011 season, select winter, but also the 2010-2011 bar in the in the ‘Value of Seasonal Transfers’ chart. If you apply multiple filters and wish to reset them you can use the main reset button by the menu.</p>
+            </div>
+        </section>
+    </main>
+    <script src="{{ url_for ('static', filename='lib/js/jquery.min.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/bootstrap.min.js')}}"></script>
+    <footer>
+        <p class="small text-muted"> Data visualization brought to you by 'The Cheesemonster' &#129472; &#128126;</p>
+    </footer>
+</body>
+</html>
